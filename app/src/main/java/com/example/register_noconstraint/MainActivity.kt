@@ -65,6 +65,6 @@ class MainActivity : AppCompatActivity() {
         email: String,
         selectcheckbox: Boolean):Boolean{
         val s = listOf(firstname, lastname, seclectradio1, selectradio2, selectradio3, birthday, address, email, selectcheckbox)
-        return s.all { true }
+        return s.all { it != null }
     }
 }
