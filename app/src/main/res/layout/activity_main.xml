@@ -20,13 +20,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/grayColor"
-            android:hint="First Name"
+            android:hint="@string/first_name1"
             android:paddingStart="5dp"
             android:paddingLeft="5dp"
             android:paddingTop="5dp"
             android:paddingEnd="5dp"
             android:paddingRight="5dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -43,12 +44,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/grayColor"
-            android:hint="Last Name"
+            android:hint="@string/last_name1"
             android:paddingLeft="5dp"
             android:paddingTop="5dp"
             android:paddingEnd="5dp"
             android:paddingRight="5dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -57,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="25dp"
-        android:text="First Name"
+        android:text="@string/first_name"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -67,16 +69,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Last Name"
+        android:text="@string/last_name"
         android:textSize="18sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="211dp" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="133dp" />
+        tools:layout_editor_absoluteX="211dp"
+        tools:ignore="MissingConstraints" />
 
     <RadioButton
         android:id="@+id/Gender"
@@ -84,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="25dp"
-        android:text="Gender"
+        android:text="@string/gender"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
@@ -95,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="25dp"
-        android:text="Male"
+        android:text="@string/male"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/Gender"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
@@ -106,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="25dp"
-        android:text="Female"
+        android:text="@string/female"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/Male"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
@@ -117,7 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="25dp"
-        android:text="Birthday"
+        android:text="@string/birthday1"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Gender" />
@@ -136,7 +133,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/grayColor"
-            android:inputType="datetime" />
+            android:hint="@string/birthday"
+            android:inputType="datetime"
+            tools:ignore="DuplicateSpeakableTextCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -145,7 +144,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="25dp"
-        android:text="Address"
+        android:text="@string/address1"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
@@ -166,7 +165,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/grayColor"
-            android:inputType="text" />
+            android:hint="@string/address"
+            android:inputType="text"
+            tools:ignore="DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -175,7 +176,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="25dp"
-        android:text="Email"
+        android:text="@string/email1"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
@@ -196,7 +197,10 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:hint="@string/email"
+            android:inputType="text"
+            android:textColorHint="#455A64"
+            tools:ignore="DuplicateSpeakableTextCheck,VisualLintTextFieldSize,TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
@@ -205,7 +209,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="15dp"
-        android:text="I agree to Terms of User"
+        android:text="@string/i_agree_to_terms_of_user"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
@@ -216,7 +220,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
         android:backgroundTint="@color/grayColor"
-        android:text="Register"
+        android:text="@string/register"
         android:textColor="@color/black"
         android:textColorLink="@color/grayColor"
         app:layout_constraintEnd_toEndOf="parent"
