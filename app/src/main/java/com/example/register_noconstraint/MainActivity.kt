@@ -64,7 +64,16 @@ class MainActivity : AppCompatActivity() {
         address: String,
         email: String,
         selectcheckbox: Boolean):Boolean{
-        val s = listOf(firstname, lastname, seclectradio1, selectradio2, selectradio3, birthday, address, email, selectcheckbox)
-        return s.all { it != null }
+        if (firstname.isNotEmpty() ||
+            lastname.isNotEmpty() ||
+            seclectradio1 == false ||
+            selectradio2 == false ||
+            selectradio3 == false ||
+            birthday.isNotEmpty() ||
+            address.isNotEmpty() ||
+            email.isNotEmpty() ||
+            selectcheckbox == false)
+            return false
+        else return true
     }
 }
